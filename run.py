@@ -120,12 +120,12 @@ def display_marks(correct_choices, choices):
     mark = int((correct_choices / len(questions)) * 100)
     print("Your Mark is: " + str(mark) + "% \n")
 
+#display message for outcome of the interview
     print("-------------------------------------\n")
     if mark >= 60:
-        print("YOU ARE QUALIFIED, \n YOU WILL HEAR FROM US IN 48 HOURS")
+        print("YOU ARE QUALIFIED,YOU WILL HEAR FROM US IN 48 HOURS \n")
     elif mark < 60:
-        print("WE ARE SORRY; \n PLEASE TRY AGAIN NEXT TIME")
-
+        print("WE ARE SORRY;PLEASE TRY AGAIN NEXT TIME \n")
 
 #create dictionary of questions awith answers and options to choose from
 questions = {
@@ -157,3 +157,5 @@ options = [
 begin_interview()
 interview_main()
 
+print("--------------------------------------------------------")
+print("THANK YOU FOR APPLYING TO OUR COMPANY")

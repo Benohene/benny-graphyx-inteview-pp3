@@ -1,5 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
+import time
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -27,22 +28,22 @@ def begin_interview():
     global FULLNAME
     FULLNAME = input("Hello Candidate, Enter your Full Name: \n")
 
-    # Relaunches start quiz if no name is entered and user only clicks Enter
+    # if no name is enter, program prompt candidate to enter name
     if FULLNAME == "":
         print("Name is Invalid, Please Enter your Full Name!")
         begin_interview()
     else:
         print(f"\nWelcome to the Job Interview Assessment, {FULLNAME}.\n")
-        
+        time.sleep(1)
         print("!!! PLEASE READ CAREFULLY THE INSTRUCTIONS.\n")
-        
-        print("-------------------------------------------------------.\n")
+        time.sleep(1)
+        print("_____________________________________________________________________\n")
         print("THERE ARE 10 INTERVIEW QUESTION, THIS WILL HELP US ASSESS YOU WELL.\n")
-        
+        time.sleep(1)
         print("EACH QUESTION COMES WILL 4 MULTI CHIOCE ANSWERS.\n")
-        
+        time.sleep(1)
         print("ENTER THE ANSWER FOR OPTIONS A,B,C AND D AND HIT ENTER.\n")
-        
+        time.sleep(1)
 
         start_interview = input("ARE YOU READY FOR THE INTERVIEW? (Y)YES or (N)NO: ")
         if start_interview.lower() != "y":

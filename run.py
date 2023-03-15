@@ -35,28 +35,48 @@ def begin_interview():
     else:
         print(f"\nWelcome to the Job Interview Assessment, {FULLNAME}.\n")
         time.sleep(1)
-        print("!!! PLEASE READ CAREFULLY THE INSTRUCTIONS.\n")
+        print("!!! PLEASE READ CAREFULLY THE INSTRUCTIONS.")
         time.sleep(1)
         print("_____________________________________________________________________\n")
-        print("THERE ARE 10 INTERVIEW QUESTION, THIS WILL HELP US ASSESS YOU WELL.\n")
+        print("1. THERE ARE 10 INTERVIEW QUESTION, THIS WILL HELP US ASSESS YOU WELL.\n")
         time.sleep(1)
-        print("EACH QUESTION COMES WILL 4 MULTI CHIOCE ANSWERS.\n")
+        print("2. EACH QUESTION COMES WILL 4 MULTI CHIOCE ANSWERS.\n")
         time.sleep(1)
-        print("ENTER THE ANSWER FOR OPTIONS A,B,C AND D AND HIT ENTER.\n")
+        print("3. ENTER THE ANSWER FOR OPTIONS A,B,C AND D AND HIT ENTER.\n")
         time.sleep(1)
-
+        print("_____________________________________________________________________\n")
+        
         start_interview = input("ARE YOU READY FOR THE INTERVIEW? (Y)YES or (N)NO: ")
         if start_interview.lower() != "y":
             quit()
-
-        print("LETS GET ON - GOOD LUCK :)")
+        print("_____________________________________________________________________\n")
         
+        print("LETS GET ON - GOOD LUCK .\n")
+        time.sleep(2)
+        
+# set up the interview questions and options to link the dictionary
+def interview_main():
+    """
+    this function will loop the questions and answers in the dictionary
+    of questions and options
+    """
 
-# ------------------------
+    print("INTERVIEW QUESTIONS")
+    choices = []
+    correct_choices = 0
+    question_numbers = 1
 
-"""def interview_main():
+    for key in questions:
+        print("-------------------------")
+        print(key)
+        for i in options[question_numbers-1]:
+            print(i)
+        choice = input("Enter (A, B, C, or D): ")
+        choice = choice.upper()
+        choices.append(choice)
 
-def check_answer():
+
+"""def check_answer():
 
 def display'''
 """
@@ -89,3 +109,4 @@ options = [
 ]
 
 begin_interview()
+interview_main()

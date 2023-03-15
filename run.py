@@ -125,8 +125,10 @@ def display_marks(correct_choices, choices):
     if mark >= 60:
         print("YOU ARE QUALIFIED,YOU WILL HEAR FROM US IN 48 HOURS \n")
     elif mark < 60:
-        print("WE ARE SORRY;PLEASE TRY AGAIN NEXT TIME \n")
+        print("WE ARE SORRY, PLEASE TRY AGAIN NEXT TIME \n")
 
+    candidate_marks = FULLNAME, mark
+    export_marks(candidate_marks)
 #create dictionary of questions awith answers and options to choose from
 questions = {
 "1.  Which one shows the pattern?: ": "C",
@@ -154,8 +156,21 @@ options = [
 ["A. Chop marks", "B. Watermark", "C. Closure", "D. Trademark"]
 ]
 
+# Export results based on Love Sandwiches project by CI
+def export_marks(candidate_marks):
+    """
+    This function will export the results of the quiz including
+    the trainees name and final score to the results worksheet
+    in order for the trainer to evaluate each person's progress
+    """
+    print("Updating Candidate Marks to worksheet...\n")
+    results_worksheet = SHEET.worksheet("overall_marks")
+    results_worksheet.append_row(candidate_marks)
+    print("Candidate Marks exported to worksheet successfully \n")
+
+
 begin_interview()
 interview_main()
 
 print("--------------------------------------------------------")
-print("THANK YOU FOR APPLYING TO OUR COMPANY")
+print("THANK YOU FOR APPLYING TO OUR COMPANY \n")

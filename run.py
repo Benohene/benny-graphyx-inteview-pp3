@@ -77,8 +77,17 @@ def interview_main():
 
         correct_choices += check_answer(questions.get(key), choice)
         question_numbers += 1
+    
+    display_marks(correct_choices, choices)
 
+
+# Check for answer and print CORRECT or WRONG
 def check_answer(answer, choice):
+    """
+    check through user answer provided
+    print CORRECT or WRONG
+    """
+    
     if answer == choice:
         print("CORRECT")
         return 1
@@ -86,8 +95,37 @@ def check_answer(answer, choice):
         print("WRONG")
         return 0
 
-"""def display'''
-"""
+# display mark on terminal
+def display_marks(correct_choices, choices):
+    """
+    display candidate answers and correct answers
+    display marks after all questions have been answered
+    display marks in percentage%
+    """
+    
+    print("-------------------------")
+    print("RESULTS")
+    print("-------------------------")
+
+    print("Answers: ", end="")
+    for i in questions:
+        print(questions.get(i), end=" ")
+    print()
+
+    print("Choices: ", end="")
+    for i in choices:
+        print(i, end=" ")
+    print()
+
+    mark = int((correct_choices / len(questions)) * 100)
+    print("Your Mark is: " + str(mark) + "% \n")
+
+    print("-------------------------------------\n")
+    if mark >= 60:
+        print("YOU ARE QUALIFIED, \n YOU WILL HEAR FROM US IN 48 HOURS")
+    elif mark < 60:
+        print("WE ARE SORRY; \n PLEASE TRY AGAIN NEXT TIME")
+
 
 #create dictionary of questions awith answers and options to choose from
 questions = {
@@ -118,3 +156,4 @@ options = [
 
 begin_interview()
 interview_main()
+

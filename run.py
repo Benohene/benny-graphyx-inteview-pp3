@@ -59,8 +59,33 @@ def begin_interview():
 def check_answer():
 
 def display'''
+"""
 
 #create dictionary of questions awith answers and options to choose from
-"""
+questions = {
+"1.  Which one shows the pattern?: ": "C",
+"2.  Which process of organizing and composing words and images to create a message?: ": "A",
+"3.  A technique in which design is incised in a metal, wood, or plastic plate. A print is then made from the plate.: ": "D",
+"4.  Which shows the areas around, above, between, below, or within something?: ": "D",
+"5.  Which color scheme that uses colors side by side have a common hue on the color wheel?: ": "B",
+"6.  which of the following is similar, lightness or darkness of a color: ": "D",
+"7.  Which of the following is any plan for organizing colors: ": "A",
+"8.  The elements of art the principle that help to organized rules for dynamical: ": "C",
+"9.  which are the primary colors of light red, green, and blue which create white light when mixed together: ": "D",
+"10. which one is a signatures carved in wood, dipped in ink, and pressed onto paper or canvas to identify their work: ": "A"
+}
+
+options = [
+["A. Texture", "B. Temperature", "C. Template", "D. Tonality"],
+["A. Graphic design", "B. Optical illusion", "C. Illusion", "D. Expression"],
+["A. Insignia", "B. Branding", "C. Harmony", "D. Engravings"],
+["A. Balance", "B. Value", "C. Hue", "D. Space"],
+["A. Color scheme", "B. Analogous color scheme", "C. Monochromatic color scheme", "D. Triad color scheme"],
+["A. Variety", "B. Space", "C. Balance", "D. Value"],
+["A. Color Scheme", "B. Color Wheel", "C. Composition", "D. Closure"],
+["A. Optical illusion", "B. The elements of art/design", "C. Principles of design", "D. Graphic design"],
+["A. Chop marks", "B. Temperature", "C. Template", "D. Additive primaries"],
+["A. Chop marks", "B. Watermark", "C. Closure", "D. Trademark"]
+]
 
 begin_interview()

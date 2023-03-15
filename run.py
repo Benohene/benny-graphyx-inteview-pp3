@@ -75,10 +75,18 @@ def interview_main():
         choice = choice.upper()
         choices.append(choice)
 
+        correct_choices += check_answer(questions.get(key), choice)
+        question_numbers += 1
 
-"""def check_answer():
+def check_answer(answer, choice):
+    if answer == choice:
+        print("CORRECT")
+        return 1
+    elif answer != choice:
+        print("WRONG")
+        return 0
 
-def display'''
+"""def display'''
 """
 
 #create dictionary of questions awith answers and options to choose from

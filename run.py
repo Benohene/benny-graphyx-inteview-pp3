@@ -2,6 +2,10 @@ import gspread
 from google.oauth2.service_account import Credentials
 import time
 
+import colorama
+from colorama import Fore, Back, Style
+colorama.init(autoreset=True)
+
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -24,7 +28,7 @@ def begin_interview():
     moves to candidate to enter full name and get access to instructions,
     then a good will message for the interview
     """
-    print("WELCOME TO BENNY GRAPHYX INTERVIEW\n")
+    print(f"{Back.RED}BENNY GRAPYHX")
 
     global FULLNAME
     FULLNAME = input("Hello Candidate, Enter your Full Name:\n")
@@ -139,16 +143,30 @@ def display_marks(correct_choices, choices):
 
 # create dictionary of questions awith answers and options to choose from
 questions = {
-    "1.  Which one shows the pattern?: ": "C",
-    "2.  Which process of organizing and composing words and images to create a message?: ": "A",
-    "3.  A technique in which design is incised in a metal, wood, or plastic plate. A print is then made from the plate.: ": "D",
-    "4.  Which shows the areas around, above, between, below, or within something?: ": "D",
-    "5.  Which color scheme that uses colors side by side have a common hue on the color wheel?: ": "B",
-    "6.  which of the following is similar, lightness or darkness of a color: ": "D",
-    "7.  Which of the following is any plan for organizing colors: ": "A",
-    "8.  The elements of art the principle that help to organized rules for dynamical: ": "C",
-    "9.  which are the primary colors of light red, green, and blue which create white light when mixed together: ": "D",
-    "10. which one is a signatures carved in wood, dipped in ink, and pressed onto paper or canvas to identify their work: ": "A"
+    "1. Which one shows the pattern?: ": "C",
+
+    "2. Which process of organizing and composing"
+    " words and images to create a message?: ": "A",
+
+    "3. A technique in which design is incised in a metal, wood, "
+    "or plastic plate. A print is then made from the plate.: ": "D",
+
+    "4. Which shows the areas around, above, between, below, or within something?: ": "D",
+    
+    "5. Which color scheme that uses colors side "
+    "by side have a common hue on the color wheel?: ": "B",
+    
+    "6. Which of the following is similar, lightness or darkness of a color: ": "D",
+    
+    "7. Which of the following is any plan for organizing colors: ": "A",
+    
+    "8. The elements of art the principle that help to organized rules for dynamical: ": "C",
+    
+    "9. Which are the primary colors of light red, green, and "
+    "blue which create white light when mixed together: ": "D",
+    
+    "10.Which one is a signatures carved in wood, dipped in ink, "
+    "and pressed onto paper or canvas to identify their work: ": "A"
 }
 
 options = [

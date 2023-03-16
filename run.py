@@ -6,6 +6,8 @@ import colorama
 from colorama import Fore, Back, Style
 colorama.init(autoreset=True)
 
+import pyfiglet
+
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -28,7 +30,8 @@ def begin_interview():
     moves to candidate to enter full name and get access to instructions,
     then a good will message for the interview
     """
-    print(f"{Back.RED}BENNY GRAPYHX")
+    print(f"{Back.RED}WELCOME TO")
+    print(pyfiglet.figlet_format("BENNY GRAPHYX"))
 
     global FULLNAME
     FULLNAME = input("Hello Candidate, Enter your Full Name:\n")
@@ -97,10 +100,10 @@ def check_answer(answer, choice):
     """
 
     if answer == choice:
-        print("CORRECT")
+        print(f"{Fore.GREEN}CORRECT")
         return 1
     elif answer != choice:
-        print("WRONG")
+        print(f"{Fore.RED}WRONG")
         return 0
 
 # display mark on terminal
@@ -133,9 +136,9 @@ def display_marks(correct_choices, choices):
 # display message for outcome of the interview
     print("-------------------------------------\n")
     if mark >= 60:
-        print("YOU ARE QUALIFIED,YOU WILL HEAR FROM US IN 48 HOURS \n")
+        print(f"{Fore.GREEN}YOU ARE QUALIFIED,YOU WILL HEAR FROM US IN 48 HOURS \n")
     elif mark < 60:
-        print("WE ARE SORRY, PLEASE TRY AGAIN NEXT TIME \n")
+        print(f"{Fore.RED}WE ARE SORRY, PLEASE TRY AGAIN NEXT TIME \n")
 
     candidate_marks = FULLNAME, mark
     export_marks(candidate_marks)

@@ -174,9 +174,11 @@ def export_marks(candidate_marks):
     in order for the trainer to evaluate each person's progress
     """
     print("Updating Candidate Marks to worksheet...\n")
+    time.sleep(2)
     results_worksheet = SHEET.worksheet("overall_marks")
     results_worksheet.append_row(candidate_marks)
     print("Candidate Marks exported to worksheet successfully \n")
+    time.sleep(1)
 
 
 begin_interview()

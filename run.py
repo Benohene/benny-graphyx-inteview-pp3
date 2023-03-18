@@ -26,9 +26,9 @@ FULLNAME = ""
 
 def begin_interview():
     """
-    Interview starts with a welcome note from the company,
-    moves to candidate to enter full name and get access to instructions,
-    then a good will message for the interview
+    The interview starts with a welcome note from the company,
+    moves to the candidate to enter the full name and get access to instructions,
+    then a goodwill message for the interview
     """
     print(f"{Back.RED}WELCOME TO")
     print(pyfiglet.figlet_format("BENNY GRAPHYX"))
@@ -36,32 +36,32 @@ def begin_interview():
     global FULLNAME
     FULLNAME = input("Hello Candidate, Enter your Full Name:\n")
 
-    # if no name is enter, program prompt candidate to enter name
+    # if no name is entered, the program prompts the candidate to enter the name
     if FULLNAME == "":
-        print("Name is Invalid, Please Enter your Full Name!")
+        print("Hello Candidate, Enter your Full Name:\n")
         begin_interview()
     else:
         print(f"\nWelcome to the Job Interview Assessment, {FULLNAME}.\n")
         time.sleep(1)
         print("!!! PLEASE READ CAREFULLY THE INSTRUCTIONS.")
         time.sleep(1)
-        print("_____________________________________________________________________\n")
+        print("________________________________\n")
         print("1. THERE ARE 10 INTERVIEW QUESTION.\n")
         time.sleep(1)
         print("2. EACH QUESTION COMES WILL 4 MULTI CHIOCE ANSWERS.\n")
         time.sleep(1)
         print("3. ENTER THE ANSWER FOR OPTIONS A,B,C AND D AND HIT ENTER.\n")
         time.sleep(1)
-        print("_____________________________________________________________________\n")
+        print("________________________________\n")
 
-        start_interview = input(
-            "ARE YOU READY FOR THE INTERVIEW? (Y)YES or (N)NO: \n")
-        if start_interview.lower() != "y":
+        start_interview = input("ARE YOU READY FOR THE INTERVIEW? (Y)YES or (N)NO: ")
+        if start_interview.lower() == "y":
+            print("__________________________________________\n")
+            print("LETS GET ON - GOOD LUCK .\n")
+            time.sleep(2)
+        elif start_interview.lower() == "n":
             quit()
-        print("_____________________________________________________________________\n")
 
-        print("LETS GET ON - GOOD LUCK .\n")
-        time.sleep(2)
 
 # set up the interview questions and options to link the dictionary
 
@@ -190,9 +190,8 @@ options = [
 # Export results based on Love Sandwiches project by CI
 def export_marks(candidate_marks):
     """
-    This function will export the results of the quiz including
-    the trainees name and final score to the results worksheet
-    in order for the trainer to evaluate each person's progress
+    export the marks of the interview including
+    the candidate's name and final marn to the overall mark worksheet
     """
     print("Updating Candidate Marks to worksheet...\n")
     time.sleep(2)

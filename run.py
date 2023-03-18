@@ -65,18 +65,18 @@ def begin_interview():
         if start_interview.lower() != "y" and start_interview.lower() != "n":
             print(f"{Fore.RED}INVALID ENTRY, PUT IN THE RIGHT VALUE Y/N \n")
             continue
-        else:
-            break
 
-        if start_interview.lower() == "y":
+        elif start_interview.lower() == "y":
             print("__________________________________________\n")
             print("LETS GET ON - GOOD LUCK .\n")
             time.sleep(2)
-        elif start_interview.lower() == "n":
+            break
+        else:
             print("________________________________\n")
             print("GOOD BYE, SEE YOU NEXT TIME \n")
             time.sleep(1)
             quit()
+            break
 
 
 # set up the interview questions and options to link the dictionary
@@ -88,7 +88,7 @@ def interview_main():
     of questions and options
     """
 
-    print("INTERVIEW QUESTIONS")
+    print(f"{Fore.CYAN}INTERVIEW QUESTIONS")
     choices = []
     correct_choices = 0
     question_numbers = 1

@@ -1,12 +1,12 @@
 import time
 import gspread
 from google.oauth2.service_account import Credentials
-
+import pyfiglet
 import colorama
 from colorama import Fore, Back
 colorama.init(autoreset=True)
 
-import pyfiglet
+
 
 
 
@@ -58,13 +58,24 @@ def begin_interview():
         time.sleep(1)
         print("________________________________\n")
 
-        start_interview = input("ARE YOU READY FOR THE INTERVIEW? "
-        "(Y)YES or (N)NO: ")
+
+    while True:
+        start_interview = input("ARE YOU READY FOR THE INTERVIEW? (Y)YES or (N)NO: \n")
+
+        if start_interview.lower() != "y" and start_interview.lower() != "n":
+            print(f"{Fore.RED}INVALID ENTRY, PUT IN THE RIGHT VALUE Y/N \n")
+            continue
+        else:
+            break
+
         if start_interview.lower() == "y":
             print("__________________________________________\n")
             print("LETS GET ON - GOOD LUCK .\n")
             time.sleep(2)
         elif start_interview.lower() == "n":
+            print("________________________________\n")
+            print("GOOD BYE, SEE YOU NEXT TIME \n")
+            time.sleep(1)
             quit()
 
 
@@ -152,46 +163,26 @@ def display_marks(correct_choices, choices):
 # create dictionary of questions awith answers and options to choose from
 questions = {
     "1. Which one shows the pattern?: ": "C",
-
-    "2. Which process of organizing and composing"
-    " words and images to create a message?: ": "A",
-
-    "3. A technique in which design is incised in a metal, wood, "
-    "or plastic plate. A print is then made from the plate.: ": "D",
-
-    "4. Which shows the areas around, above, between, "
-    "below, or within something?: ": "D",
-    
-    "5. Which color scheme that uses colors side "
-    "by side have a common hue on the color wheel?: ": "B",
-    
-    "6. Which of the following is similar, lightness or "
-    "darkness of a color: ": "D",
-    
-    "7. Which of the following is any plan for organizing colors: ": "A",
-    
-    "8. The elements of art the principle that help to organized "
-    "rules for dynamical: ": "C",
-    
-    "9. Which are the primary colors of light red, green, and "
-    "blue which create white light when mixed together: ": "D",
-    
-    "10.Which one is a signatures carved in wood, dipped in ink, "
-    "and pressed onto paper or canvas to identify their work: ": "A"
+    "2. Organizing and composing words and images to create a message: ": "A",
+    "3. A print is made from a metal, wood, or plastic plate.: ": "D",
+    "4. The areas around, above, between, below, or within something.: ": "D", 
+    "5. Color schemes that use colors side by side have a common hue.: ": "B",  
+    "6. Lightness or darkness of a color. ": "D",   
+    "7. Which of the following is any plan for organizing colors: ": "A",   
+    "8. This Art helps to organized rules for dynamical process: ": "C",   
+    "9. The primary colors mixed to create white light: ": "D",   
+    "10.Signatures are carved, dipped in ink, and pressed onto paper.": "A"
 }
 
 options = [
     ["A. Texture", "B. Temperature", "C. Template", "D. Tonality"],
-    ["A. Graphic design", "B. Optical illusion", "C. Illusion", 
-    "D. Expression"],
+    ["A. Graphic design", "B. Optical illusion", "C. Illusion", "D. Expression"],
     ["A. Insignia", "B. Branding", "C. Harmony", "D. Engravings"],
     ["A. Balance", "B. Value", "C. Hue", "D. Space"],
-    ["A. Color scheme", "B. Analogous color scheme",
-        "C. Monochromatic color scheme", "D. Triad color scheme"],
+    ["A. Color scheme", "B. Analogous color scheme", "C. Monochromatic color scheme", "D. Triad color scheme"],
     ["A. Variety", "B. Space", "C. Balance", "D. Value"],
     ["A. Color Scheme", "B. Color Wheel", "C. Composition", "D. Closure"],
-    ["A. Optical illusion", "B. The elements of art/design",
-        "C. Principles of design", "D. Graphic design"],
+    ["A. Optical illusion", "B. The elements of art/design", "C. Principles of design", "D. Graphic design"],
     ["A. Chop marks", "B. Temperature", "C. Template", "D. Additive primaries"],
     ["A. Chop marks", "B. Watermark", "C. Closure", "D. Trademark"]
 ]

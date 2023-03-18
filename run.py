@@ -1,12 +1,14 @@
+import time
 import gspread
 from google.oauth2.service_account import Credentials
-import time
 
 import colorama
-from colorama import Fore, Back, Style
+from colorama import Fore, Back
 colorama.init(autoreset=True)
 
 import pyfiglet
+
+
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -26,17 +28,19 @@ FULLNAME = ""
 
 def begin_interview():
     """
-    The interview starts with a welcome note from the company,
-    moves to the candidate to enter the full name and get access to instructions,
-    then a goodwill message for the interview
+    The interview starts with a welcome note from the company
+    moves to the candidate to enter the full name 
+    instructions,then a goodwill message for the interview
     """
-    print(f"{Back.RED}WELCOME TO")
+    print("________________________________\n")
+    print(f"{Back.RED}WELCOME TO INTERVIEW ASSESSMENT")
+    print("________________________________")
     print(pyfiglet.figlet_format("BENNY GRAPHYX"))
 
     global FULLNAME
     FULLNAME = input("Hello Candidate, Enter your Full Name:\n")
 
-    # if no name is entered, the program prompts the candidate to enter the name
+    # if no name is entered, prompts the candidate to enter the name
     if FULLNAME == "":
         print("Hello Candidate, Enter your Full Name:\n")
         begin_interview()
@@ -54,7 +58,8 @@ def begin_interview():
         time.sleep(1)
         print("________________________________\n")
 
-        start_interview = input("ARE YOU READY FOR THE INTERVIEW? (Y)YES or (N)NO: ")
+        start_interview = input("ARE YOU READY FOR THE INTERVIEW? "
+        "(Y)YES or (N)NO: ")
         if start_interview.lower() == "y":
             print("__________________________________________\n")
             print("LETS GET ON - GOOD LUCK .\n")
@@ -136,9 +141,9 @@ def display_marks(correct_choices, choices):
 # display message for outcome of the interview
     print("-------------------------------------\n")
     if mark >= 60:
-        print(f"{Fore.GREEN}YOU ARE QUALIFIED,YOU WILL HEAR FROM US IN 48 HOURS \n")
+        print(f"{Fore.GREEN}CONGRATULATION; YOU ARE QUALIFIED \n")
     elif mark < 60:
-        print(f"{Fore.RED}WE ARE SORRY, PLEASE TRY AGAIN NEXT TIME \n")
+        print(f"{Fore.RED}SORRY, YOUR ARE DISQUALIFIES \n")
 
     candidate_marks = FULLNAME, mark
     export_marks(candidate_marks)
@@ -154,16 +159,19 @@ questions = {
     "3. A technique in which design is incised in a metal, wood, "
     "or plastic plate. A print is then made from the plate.: ": "D",
 
-    "4. Which shows the areas around, above, between, below, or within something?: ": "D",
+    "4. Which shows the areas around, above, between, "
+    "below, or within something?: ": "D",
     
     "5. Which color scheme that uses colors side "
     "by side have a common hue on the color wheel?: ": "B",
     
-    "6. Which of the following is similar, lightness or darkness of a color: ": "D",
+    "6. Which of the following is similar, lightness or "
+    "darkness of a color: ": "D",
     
     "7. Which of the following is any plan for organizing colors: ": "A",
     
-    "8. The elements of art the principle that help to organized rules for dynamical: ": "C",
+    "8. The elements of art the principle that help to organized "
+    "rules for dynamical: ": "C",
     
     "9. Which are the primary colors of light red, green, and "
     "blue which create white light when mixed together: ": "D",
@@ -174,7 +182,8 @@ questions = {
 
 options = [
     ["A. Texture", "B. Temperature", "C. Template", "D. Tonality"],
-    ["A. Graphic design", "B. Optical illusion", "C. Illusion", "D. Expression"],
+    ["A. Graphic design", "B. Optical illusion", "C. Illusion", 
+    "D. Expression"],
     ["A. Insignia", "B. Branding", "C. Harmony", "D. Engravings"],
     ["A. Balance", "B. Value", "C. Hue", "D. Space"],
     ["A. Color scheme", "B. Analogous color scheme",
@@ -186,6 +195,7 @@ options = [
     ["A. Chop marks", "B. Temperature", "C. Template", "D. Additive primaries"],
     ["A. Chop marks", "B. Watermark", "C. Closure", "D. Trademark"]
 ]
+
 
 # Export results based on Love Sandwiches project by CI
 def export_marks(candidate_marks):

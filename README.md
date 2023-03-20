@@ -80,10 +80,10 @@ The Overall Mark of the Candidate will be exported to the Google sheet linked to
 To store the question and response information for the interview, I utilized a dictionary in this application. I structured the code in a way that any updates to the dictionary may be made without requiring changes to any other functionality. The user result and total number of questions in the dictionary are always presented with accurate data thanks to the usage of f-Strings in print statements.
 
 ## <strong>Future Features</strong>
------
 The question are the same so in future there can be randomising the questons.
 In feature there will be timer for the interview questions which will help reduce plagiarism on the side of candidate
 
+---
 # <strong style="color:yellow">DESIGN</strong>
 I made a straightforward flowchart showing the anticipated logic flow of the program from beginning to end using draw io. This made it easier for me to start imagining the code's structure and potential functional requirements.
 
@@ -91,6 +91,7 @@ The software gives the user feedback at several points to let them know if they 
 
 ![Flow chart](docs/testing/Flowchart.jpg)
 
+---
 # <strong style="color:yellow">USER EXPERIENCE</strong>
 ### <b>Project goal</b>
 * Provide the candidate a pleasant, interesting, and simple multiple-choice interview assessment test.
@@ -103,6 +104,8 @@ The software gives the user feedback at several points to let them know if they 
 * To receive notification when my input is incorrect and to be given the chance to change any incorrect input without stopping the app's operation.
 * To be able to read the application output clearly.
 * To see my total marks and the assessment status for the interview.
+
+---
 # <strong style="color:yellow">TECHNOLOGIES</strong>
 Python - used entirely for the app to initialise user and app commands.
 
@@ -141,6 +144,36 @@ The following git commands were used throughout development to push code to the 
 [CI Python Linter](https://pep8ci.herokuapp.com/#) used to check for errors in the code.
 
 Microsoft Snipping Tool for screenshots
+
+---
 # <strong style="color:yellow">TESTING</strong>
+The code was run through the Code Institute Python Linter and showed no errors.
+The firstr test came out with some error and was fix according to the information given by the validator.
+
+### <b>CI Linter with Errors</b>
+![Errors](docs/images/errors-pylinter.jpg)
+
+### <b>CI Linter with Errors Fix</b>
+![Error-fixed](docs/images/no-errors-pylinter.jpg)
 # <strong style="color:yellow">DEPLOYMENT</strong>
+Deployment was done at the start of the project to allow device testing throughout the development process.
+
+My project was deployed via Heroku as follows:
+1.  Remove un-used imports from run.py file.
+2.  Add dependencies in GitPod to requirements.txt file with command "pip3 freeze > requirements.txt".
+3.  In Heroku account, go to Dashboard and click ‘Create New App’. Give the app a unique name and select region (Europe).
+4.  The next page you will see is the project’s Deploy Tab. Click on the Settings Tab and scroll down to Config Vars.
+5.  Click Reveal Config Vars and enter port into the Key box and 8000 into the Value box and click the Add button.
+6.  Next, scroll down to the Buildpack section click Add Buildpack select python and click Save Changes.
+7.  Repeat step 6 to add node.js. o Note: The Buildpacks must be in the correct order. If not click and drag them to move into the correct order.
+8.  Scroll to the top of the page and now choose the Deploy tab.
+9.  Select Github as the deployment method.
+10. Confirm you want to connect to GitHub.
+11. Search for the repository name and click the connect button.
+12. Scroll to the bottom of the deploy page and select preferred deployment type:
+13. Click either Enable Automatic Deploys for automatic deployment when you push updates to Github.
+
+***Git add, git commit and git push are necessary to update the website anytime there is changes in the code***
+
+Select the correct branch for deployment from the drop-down menu and click Deploy Branch for manual deployment.
 # <strong style="color:yellow">CREDITS</strong>

@@ -66,7 +66,8 @@ def begin_interview():
         print("________________________________\n")
 
     while True:
-        start_interview = input("ARE YOU READY FOR THE INTERVIEW? (Y)YES or (N)NO: \n")
+        start_interview = input(
+            "ARE YOU READY FOR THE INTERVIEW? (Y)YES or (N)NO: \n")
 
         if start_interview.lower() != "y" and start_interview.lower() != "n":
             print(f"{Fore.RED}INVALID ENTRY, PUT IN THE RIGHT VALUE Y/N \n")
@@ -182,14 +183,18 @@ questions = {
 
 options = [
     ["A. Texture", "B. Temperature", "C. Template", "D. Tonality"],
-    ["A. Graphic design", "B. Optical illusion", "C. Illusion", "D. Expression"],
+    ["A. Graphic design", "B. Optical illusion", "C. Illusion",
+        "D. Expression"],
     ["A. Insignia", "B. Branding", "C. Harmony", "D. Engravings"],
     ["A. Balance", "B. Value", "C. Hue", "D. Space"],
-    ["A. Color scheme", "B. Analogous color scheme", "C. Monochromatic color scheme", "D. Triad color scheme"],
+    ["A. Color scheme", "B. Analogous color scheme",
+        "C. Monochromatic color scheme", "D. Triad color scheme"],
     ["A. Variety", "B. Space", "C. Balance", "D. Value"],
     ["A. Color Scheme", "B. Color Wheel", "C. Composition", "D. Closure"],
-    ["A. Optical illusion", "B. The elements of art/design", "C. Principles of design", "D. Graphic design"],
-    ["A. Chop marks", "B. Temperature", "C. Template", "D. Additive primaries"],
+    ["A. Optical illusion", "B. The elements of art/design",
+        "C. Principles of design", "D. Graphic design"],
+    ["A. Chop marks", "B. Temperature", "C. Template",
+        "D. Additive primaries"],
     ["A. Chop marks", "B. Watermark", "C. Closure", "D. Trademark"]
 ]
 

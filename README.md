@@ -155,6 +155,15 @@ The firstr test came out with some error and was fix according to the informatio
 
 ### <b>CI Linter with Errors Fix</b>
 ![Error-fixed](docs/images/no-errors-pylinter.jpg)
+
+### <b>Bugs</b>
++ When user entered space at enter fullname, and then press enter, it bypass validation into then next stage.
+    + Fixed by ```while not FULLNAME.strip():```
+
++ Initial the statement ```ARE YOU READY FOR THE INTERVIEW? (Y)YES or (N)NO:``` accepts 'Y' aand progress but any other character to quit instead of on 'N'. 
+    + Fixed with the ```while True:``` to loop through plus ```continue``` and ```break```.
+
+
 # <strong style="color:yellow">DEPLOYMENT</strong>
 Deployment was done at the start of the project to allow device testing throughout the development process.
 
@@ -177,13 +186,20 @@ My project was deployed via Heroku as follows:
 
 Select the correct branch for deployment from the drop-down menu and click Deploy Branch for manual deployment.
 
+---
 # <strong style="color:yellow">CREDITS</strong>
 I watched a lot of python tutorials along Code Institute materials to get deeper understand of the python language.
-I watch videos from therese youtube channels
-AmigosCode
-Programming with Mosh
-Teddy Smith
-Bro Code
++ I watch videos from therese youtube channels
+    + AmigosCode
+    + Programming with Mosh
+    + Teddy Smith
+    + Bro Code
+
++ The interview questions and structure of the code was done by the help of the video tutorials by Bro Code.
+
++ Exporting results functionality based on Love_Sandwiches demo project by CI.
+
+### <b>Acknowledgement</b>
 I want to appreciate my mentor Daisy Mc Girr for her time and efforts invested in me.
 
 Background image was taken from [Pexel](https://www.pexels.com/de-de/).

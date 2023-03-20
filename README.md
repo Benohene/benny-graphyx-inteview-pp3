@@ -104,6 +104,43 @@ The software gives the user feedback at several points to let them know if they 
 * To be able to read the application output clearly.
 * To see my total marks and the assessment status for the interview.
 # <strong style="color:yellow">TECHNOLOGIES</strong>
+Python - used entirely for the app to initialise user and app commands.
+
+HTML - The structure of the Homepage and Quiz game page were developed using HTML as the main language.
+
+Javasript - there was a mockup js file in the template.
+
+GitHub - The source code is hosted on GitHub and deployed using Git Pages.
+
+Git - Used to commit and push code during the development of the Website
+The site was created using the Gitpod and pushed to github to the remote repository.
+
+***Gitpod is an open source developer platform automating the provisioning of ready-to-code developer environments.***
+
+The following git commands were used throughout development to push code to the remote repo:
+
+```git add .``` - This command was used to add all updated file(s) to the staging area.
+
+```git commit -m “commit message”``` - This command was used to commit changes from the staging area to the local repository queue ready for the final step.
+
+```git push``` - This command was used to push all committed code to the remote repository on Git Hub so it is safe and secure.
+
+### <b>Libraries, frameworks and others</b>
+[Colorama](https://pypi.org/project/colorama/) for adding colour to fonts.
+
+[Pyfiglet](https://pypi.org/project/pyfiglet/0.7/) for adding ascii art.
+
+[G-Spread](https://pypi.org/project/gspread/) used to initialise the export of the marks onto a google sheet.
+
+[Time-sleep](https://docs.python.org/3/library/time.html) used for loading times in diplaying information.
+
+[Draw io](https://app.diagrams.net/) was used to create the Flowchart.
+
+[Heroku](https://www.heroku.com/) used for deploying the website live - Cloud Application Platform.
+
+[CI Python Linter](https://pep8ci.herokuapp.com/#) used to check for errors in the code.
+
+Microsoft Snipping Tool for screenshots
 # <strong style="color:yellow">TESTING</strong>
 # <strong style="color:yellow">DEPLOYMENT</strong>
 # <strong style="color:yellow">CREDITS</strong>

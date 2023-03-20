@@ -176,4 +176,14 @@ My project was deployed via Heroku as follows:
 ***Git add, git commit and git push are necessary to update the website anytime there is changes in the code***
 
 Select the correct branch for deployment from the drop-down menu and click Deploy Branch for manual deployment.
+
 # <strong style="color:yellow">CREDITS</strong>
+I watched a lot of python tutorials along Code Institute materials to get deeper understand of the python language.
+I watch videos from therese youtube channels
+AmigosCode
+Programming with Mosh
+Teddy Smith
+Bro Code
+I want to appreciate my mentor Daisy Mc Girr for her time and efforts invested in me.
+
+Background image was taken from [Pexel](https://www.pexels.com/de-de/).

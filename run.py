@@ -48,8 +48,8 @@ def begin_interview():
     FULLNAME = input("Hello Candidate, Enter your Full Name:\n")
 
     # if no name is entered, prompts the candidate to enter the name
-    if FULLNAME == "":
-        print("Hello Candidate, Enter your Full Name:\n")
+    while not FULLNAME.strip():
+        print(f"{Fore.RED}Name is INVALID, Please Enter your Full Name!")
         begin_interview()
     else:
         print(f"\nWelcome to the Job Interview Assessment, {FULLNAME}.\n")

@@ -1,13 +1,20 @@
+"""
+All import for the interview terminal
+"""
+# import time for time sleep
 import time
+
+# import gspread for marks recording
 import gspread
 from google.oauth2.service_account import Credentials
+
+# import pyfiglet module for ascii art
 import pyfiglet
+
+# import colorama for adding colour
 import colorama
 from colorama import Fore, Back
 colorama.init(autoreset=True)
-
-
-
 
 
 SCOPE = [
@@ -29,7 +36,7 @@ FULLNAME = ""
 def begin_interview():
     """
     The interview starts with a welcome note from the company
-    moves to the candidate to enter the full name 
+    moves to the candidate to enter the full name
     instructions,then a goodwill message for the interview
     """
     print("________________________________\n")
@@ -57,7 +64,6 @@ def begin_interview():
         print("3. ENTER THE ANSWER FOR OPTIONS A,B,C AND D AND HIT ENTER.\n")
         time.sleep(1)
         print("________________________________\n")
-
 
     while True:
         start_interview = input("ARE YOU READY FOR THE INTERVIEW? (Y)YES or (N)NO: \n")
@@ -118,7 +124,7 @@ def check_answer(answer, choice):
     if answer == choice:
         print(f"{Fore.GREEN}CORRECT")
         return 1
-    elif answer != choice:
+    else:
         print(f"{Fore.RED}WRONG")
         return 0
 
@@ -154,7 +160,7 @@ def display_marks(correct_choices, choices):
     if mark >= 60:
         print(f"{Fore.GREEN}CONGRATULATION; YOU ARE QUALIFIED \n")
     elif mark < 60:
-        print(f"{Fore.RED}SORRY, YOUR ARE DISQUALIFIES \n")
+        print(f"{Fore.RED}SORRY, YOU ARE DISQUALIFIES \n")
 
     candidate_marks = FULLNAME, mark
     export_marks(candidate_marks)
@@ -165,12 +171,12 @@ questions = {
     "1. Which one shows the pattern?: ": "C",
     "2. Organizing and composing words and images to create a message: ": "A",
     "3. A print is made from a metal, wood, or plastic plate.: ": "D",
-    "4. The areas around, above, between, below, or within something.: ": "D", 
-    "5. Color schemes that use colors side by side have a common hue.: ": "B",  
-    "6. Lightness or darkness of a color. ": "D",   
-    "7. Which of the following is any plan for organizing colors: ": "A",   
-    "8. This Art helps to organized rules for dynamical process: ": "C",   
-    "9. The primary colors mixed to create white light: ": "D",   
+    "4. The areas around, above, between, below, or within something.: ": "D",
+    "5. Color schemes that use colors side by side have a common hue.: ": "B",
+    "6. Lightness or darkness of a color. ": "D",
+    "7. Which of the following is any plan for organizing colors: ": "A",
+    "8. This Art helps to organized rules for dynamical process: ": "C",
+    "9. The primary colors mixed to create white light: ": "D",
     "10.Signatures are carved, dipped in ink, and pressed onto paper.": "A"
 }
 

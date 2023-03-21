@@ -37,7 +37,7 @@ def begin_interview():
     """
     The interview starts with a welcome note from the company
     moves to the candidate to enter the full name
-    instructions,then a goodwill message for the interview
+    instructions, then a goodwill message for the interview
     """
     print("________________________________\n")
     print(f"{Back.RED}WELCOME TO INTERVIEW ASSESSMENT")
@@ -47,7 +47,7 @@ def begin_interview():
     global FULLNAME
     FULLNAME = input("Hello Candidate, Enter your Full Name:\n")
 
-    # if no name is entered, prompts the candidate to enter the name
+    # if no name is entered, prompt the candidate to enter the name
     while not FULLNAME.strip():
         print(f"{Fore.RED}Name is INVALID, Please Enter your Full Name!")
         begin_interview()
@@ -59,7 +59,7 @@ def begin_interview():
         print("________________________________\n")
         print("1. THERE ARE 10 INTERVIEW QUESTION.\n")
         time.sleep(1)
-        print("2. EACH QUESTION COMES WILL 4 MULTI CHIOCE ANSWERS.\n")
+        print("2. EACH QUESTION COMES WILL 4 MULTI CHOICE ANSWERS.\n")
         time.sleep(1)
         print("3. ENTER THE ANSWER FOR OPTIONS A,B,C AND D AND HIT ENTER.\n")
         time.sleep(1)
@@ -114,22 +114,18 @@ def interview_main():
 
     display_marks(correct_choices, choices)
 
-
 # Check for answer and print CORRECT or WRONG
 def check_answer(answer, choice):
     """
     check through user answer provided
     print CORRECT or WRONG
     """
-
     if answer == choice:
         print(f"{Fore.GREEN}CORRECT")
         return 1
     else:
         print(f"{Fore.RED}WRONG")
         return 0
-
-# display mark on terminal
 
 
 def display_marks(correct_choices, choices):
@@ -160,6 +156,8 @@ def display_marks(correct_choices, choices):
     print("-------------------------------------\n")
     if mark >= 60:
         print(f"{Fore.GREEN}CONGRATULATION; YOU ARE QUALIFIED \n")
+        print("-------------------------")
+        print("We wiil contact you within the next 48 Hours")
     elif mark < 60:
         print(f"{Fore.RED}SORRY, YOU ARE DISQUALIFIES \n")
 

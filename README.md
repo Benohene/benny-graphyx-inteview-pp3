@@ -155,6 +155,37 @@ The first test came out with some errors which were fixed according to the infor
     + Fixed with the ```while True:``` to loop through plus ```continue``` and ```break```.
 
 ---
+<b>INPUT TEST</b>
+
++ If user does not enter the name and leave the input space blank, it will prompt with an error message to enter name
+
+![Error](docs/images/invalid-name-2.jpg)
+
++ Name entry test was also tested manually and it passed the test, This will then proceed the terminal to the next stage.
+
+![No Error](docs/images/name-entered.jpg)
+
++ Before the interview question, the user is prompted to continue or quit the interview application with a yes or no question. This input feature has been tested manually and works really well. If User provides and character other thank Y or N to say yes or no, there will be a error message to prompt user that only Y or N is accepted.
+
+![](docs/images/enter-interview-request.jpg)
+![](docs/images/enter-interview-request-error.jpg)
+![](docs/images/enter-interview-no-entered.jpg)
+![](docs/images/enter-interview-yes-entered.jpg)
+
++ With in the interview question and answers, the user must provide a choice of answer for each interview question. The user must input one out of four options. 
+
+<b>UNFIX BUGS</b>
+Here the option list fails to validate and this will be look at in the future. It accepts other character apart from A B C and D. But with the correct option input, the app will indicate to the user whether the choice of anser is correct or wrong.
+
+![](docs/images/enter-answer.jpg)
+![](docs/images/correct.jpg)
+![](docs/images/wrong.jpg)
+
++ The exporting of Marks to the Google sheet was also tested manually and everything works flawlessly.
+![](docs/images/export-end-message.jpg)
+
+
+---
 # <strong style="color:yellow">DEPLOYMENT</strong>
 Deployment was done at the start of the project to allow device testing throughout the development process.
 

@@ -157,7 +157,7 @@ def display_marks(correct_choices, choices):
     if mark >= 60:
         print(f"{Fore.GREEN}CONGRATULATION; YOU ARE QUALIFIED \n")
         print("-------------------------")
-        print("We wiil contact you within the next 48 Hours")
+        print(f"{Fore.CYAN}We will contact you within the next 48 Hours")
     elif mark < 60:
         print(f"{Fore.RED}SORRY, YOU ARE DISQUALIFIES \n")
 
